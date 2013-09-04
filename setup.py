@@ -7,7 +7,7 @@ except ImportError:
     from distutils.core import setup, Extension
     has_setuptools = False
 
-version_string = '0.0.1'
+version_string = '0.0.2'
 
 
 setup_kwargs = {}
