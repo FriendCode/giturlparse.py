@@ -36,6 +36,16 @@ VALID_PARSE_URLS = (
         'bitbucket': False,
         'assembla': False
     })),
+
+    # BitBucket
+    ('SSH', ('git@bitbucket.org:Org/Repo.git', {
+        'host': 'bitbucket.org',
+        'user': 'Org',
+        'repo': 'Repo',
+
+        'protocol': 'ssh',
+        'platform': 'bitbucket'
+    })),
 )
 
 INVALID_PARSE_URLS = (
@@ -50,14 +60,10 @@ class UrlParseTestCase(unittest.TestCase):
 
     def _test_valid(self, url, results):
         p = parse(url)
+        self.failUnless(p.valid, "%s is not a valid URL" % url)
         for k,v in results.items():
             attr_v = getattr(p, k)
-            try:
-                self.assertEqual(attr_v, v, "[%s] Property '%s' should be '%s' but is '%s'" % (url, k, attr_v, v))
-            except Exception as e:
-                print("\nDICT = %s\n" % dict(p._matches))
-                raise e
-        self.failUnless(p.valid)
+            self.assertEqual(attr_v, v, "[%s] Property '%s' should be '%s' but is '%s'" % (url, k, attr_v, v))
 
     def testValidUrls(self):
         for test_type, data in VALID_PARSE_URLS:
