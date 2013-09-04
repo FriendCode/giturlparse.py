@@ -1,12 +1,14 @@
 # Imnports
 import unittest
 from . import parse
+from . import rewrite
 
 # Main
 def main():
     # Suite of suites ...
     suite = unittest.TestSuite([
-        parse.suite
+        parse.suite,
+        rewrite.suite,
     ])
 
     # Runner
