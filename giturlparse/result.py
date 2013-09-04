@@ -51,24 +51,38 @@ class GitUrlParsed(object):
         return self._platform_obj.FORMATS[protocol] % self._parsed
 
     ##
+    # Normalize
+    ##
+    @property
+    def normalized(self):
+        return self.format(self.protocol)
+
+    ##
     # Rewriting
     ##
+    @property
     def url2ssh(self):
         return self.format('ssh')
 
+    @property
     def url2http(self):
         return self.format('http')
 
+    @property
     def url2https(self):
         return self.format('https')
 
+    @property
     def url2git(self):
         return self.format('git')
 
     # All supported Urls for a repo
     @property
     def urls(self):
-        pass
+        return dict(
+            (protocol, self.format(protocol))
+            for protocol in self._platform_obj.PROTOCOLS
+        )
 
     ##
     # Platforms
@@ -94,4 +108,4 @@ class GitUrlParsed(object):
     ##
     @property
     def data(self):
-        return self._parsed
+        return dict(self._parsed)
