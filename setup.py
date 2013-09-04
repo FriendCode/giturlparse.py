@@ -21,7 +21,7 @@ install_requires = [
 dependency_links = [
 ]
 
-setup(name='giturlparse',
+setup(name='giturlparse.py',
     description='A Git URL parsing module (supports parsing and rewriting)',
     keywords='git url parse ssh github bitbucket',
     version=version_string,
