@@ -6,7 +6,7 @@ Parse &amp; rewrite git urls (supports GitHub, Bitbucket, FriendCode, Assembla .
 ## Installing
 
 ```bash
-pip install giturlparse
+pip install giturlparse.py
 ```
 
 ## Examples
