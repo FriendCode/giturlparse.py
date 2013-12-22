@@ -12,3 +12,6 @@ class AssemblaPlatform(BasePlatform):
         'ssh': r'git@%(domain)s:%(repo)s.git',
         'git': r'git://%(domain)s/%(repo)s.git',
     }
+    DEFAULTS = {
+        '_user': 'git'
+    }

@@ -45,6 +45,9 @@ def parse(url):
             # Update info with matches
             parsed_info.update(matches)
 
+            # add in platform defaults
+            parsed_info.update(platform.DEFAULTS)
+
             # Update info with platform info
             parsed_info.update({
                 'url': url,

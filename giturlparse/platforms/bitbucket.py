@@ -11,3 +11,6 @@ class BitbucketPlatform(BasePlatform):
         'ssh': r'git@%(domain)s:%(owner)s/%(repo)s.git'
     }
     DOMAINS = ('bitbucket.org',)
+    DEFAULTS = {
+        '_user': 'git'
+    }
