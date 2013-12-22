@@ -42,7 +42,10 @@ class GitUrlParsed(object):
 
     @property
     def user(self):
-        return getattr(self, '_user') or self.owner
+        if hasattr(self, '_user'):
+            return self._user
+
+        return self.owner
 
     ##
     # Format URL to protocol
