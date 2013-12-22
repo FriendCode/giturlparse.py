@@ -1,5 +1,5 @@
 # Imports
-from platforms import PLATFORMS, PLATFORMS_MAP
+from .platforms import PLATFORMS, PLATFORMS_MAP
 
 
 # Possible values to extract from a Git Url
