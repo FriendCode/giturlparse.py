@@ -8,7 +8,8 @@ VALID_PARSE_URLS = (
     # Valid SSH, HTTPS, GIT
     ('SSH', ('git@github.com:Org/Repo.git', {
         'host': 'github.com',
-        'user': 'Org',
+        'user': 'git',
+        'owner': 'Org',
         'repo': 'Repo',
 
         'protocol': 'ssh',
@@ -18,7 +19,8 @@ VALID_PARSE_URLS = (
     })),
     ('HTTPS', ('https://github.com/Org/Repo.git', {
         'host': 'github.com',
-        'user': 'Org',
+        'user': 'git',
+        'owner': 'Org',
         'repo': 'Repo',
 
         'protocol': 'https',
@@ -28,7 +30,8 @@ VALID_PARSE_URLS = (
     })),
     ('GIT', ('git://github.com/Org/Repo.git', {
         'host': 'github.com',
-        'user': 'Org',
+        'user': 'git',
+        'owner': 'Org',
         'repo': 'Repo',
 
         'protocol': 'git',
@@ -40,7 +43,8 @@ VALID_PARSE_URLS = (
     # BitBucket
     ('SSH', ('git@bitbucket.org:Org/Repo.git', {
         'host': 'bitbucket.org',
-        'user': 'Org',
+        'user': 'git',
+        'owner': 'Org',
         'repo': 'Repo',
 
         'protocol': 'ssh',

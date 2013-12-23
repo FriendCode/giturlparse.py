@@ -18,6 +18,7 @@ class BasePlatform(object):
 
     # None means it matches all domains
     DOMAINS = None
+    DEFAULTS = {}
 
     def __init__(self):
         # Precompile PATTERNS

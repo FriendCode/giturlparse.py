@@ -14,4 +14,7 @@ class GitHubPlatform(BasePlatform):
         'git': r'git://%(domain)s/%(owner)s/%(repo)s.git'
     }
     DOMAINS = ('github.com', 'gist.github.com',)
+    DEFAULTS = {
+        '_user': 'git'
+    }
 
