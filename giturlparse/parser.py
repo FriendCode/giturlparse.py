@@ -15,7 +15,7 @@ SUPPORTED_ATTRIBUTES = (
 )
 
 
-def parse(url):
+def parse(url, check_domain=True):
     # Values are None by default
     parsed_info = defaultdict(lambda: None)
 
@@ -35,9 +35,10 @@ def parse(url):
             # Skip if domain is bad
             domain = match.group('domain')
             #print('[%s] DOMAIN = %s' % (url, domain,))
-            if platform.DOMAINS and not(domain in platform.DOMAINS):
-                #print("domain: %s not in %s" % (domain, platform.DOMAINS))
-                continue
+            if check_domain:
+                if platform.DOMAINS and not(domain in platform.DOMAINS):
+                    #print("domain: %s not in %s" % (domain, platform.DOMAINS))
+                    continue
 
             # Get matches as dictionary
             matches = match.groupdict()
