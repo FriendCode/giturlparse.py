@@ -38,6 +38,16 @@ REWRITE_URLS = (
 
     # FriendCode HTTPS
     ('https://friendco.de/Aaron@user/test-repo.git', 'https', 'https://friendco.de/Aaron@user/test-repo.git'),
+
+    # Gitlab SSH
+    ('git@host.org:Org/Repo.git', 'ssh', 'ssh://git@host.org:Org/Repo.git'),
+    ('git@host.org:9999/Org/Repo.git', 'ssh', 'ssh://git@host.org:9999/Org/Repo.git'),
+    ('git@host.org:Org/Repo.git', 'https', 'https://host.org/Org/Repo.git'),
+    ('git@host.org:9999/Org/Repo.git', 'https', 'https://host.org/Org/Repo.git'),
+
+    # Gitlab HTTPS
+    ('https://host.org/Org/Repo.git', 'ssh', 'ssh://git@host.org:Org/Repo.git'),
+    ('https://host.org/Org/Repo.git', 'https', 'https://host.org/Org/Repo.git'),
 )
 
 INVALID_PARSE_URLS = (

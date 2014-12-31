@@ -50,6 +50,44 @@ VALID_PARSE_URLS = (
         'protocol': 'ssh',
         'platform': 'bitbucket'
     })),
+
+    # Gitlab
+    ('SSH', ('git@host.org:9999/Org/Repo.git', {
+        'host': 'host.org',
+        'user': 'git',
+        'owner': 'Org',
+        'repo': 'Repo',
+
+        'protocol': 'ssh',
+        'platform': 'gitlab'
+    })),
+    ('SSH', ('git@host.org:Org/Repo.git', {
+        'host': 'host.org',
+        'user': 'git',
+        'owner': 'Org',
+        'repo': 'Repo',
+
+        'protocol': 'ssh',
+        'platform': 'gitlab'
+    })),
+    ('SSH', ('ssh://git@host.org:9999/Org/Repo.git', {
+        'host': 'host.org',
+        'user': 'git',
+        'owner': 'Org',
+        'repo': 'Repo',
+
+        'protocol': 'ssh',
+        'platform': 'gitlab'
+    })),
+    ('HTTPS', ('https://host.org/Org/Repo.git', {
+        'host': 'host.org',
+        'user': 'git',
+        'owner': 'Org',
+        'repo': 'Repo',
+
+        'protocol': 'https',
+        'platform': 'gitlab'
+    })),
 )
 
 INVALID_PARSE_URLS = (
