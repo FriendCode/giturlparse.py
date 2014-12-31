@@ -4,6 +4,7 @@ from .github import GitHubPlatform
 from .bitbucket import BitbucketPlatform
 from .friendcode import FriendCodePlatform
 from .assembla import AssemblaPlatform
+from .gitlab import GitlabPlatform
 
 
 # Supported platforms
@@ -13,6 +14,7 @@ PLATFORMS = (
     ('bitbucket', BitbucketPlatform()),
     ('friendcode', FriendCodePlatform()),
     ('assembla', AssemblaPlatform()),
+    ('gitlab', GitlabPlatform()),
 
     # Match url
     ('base', BasePlatform()),

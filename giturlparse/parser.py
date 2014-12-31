@@ -8,6 +8,7 @@ SUPPORTED_ATTRIBUTES = (
     'repo',
     'owner',
     '_user',
+    'port',
 
     'url',
     'platform',
@@ -18,6 +19,7 @@ SUPPORTED_ATTRIBUTES = (
 def parse(url, check_domain=True):
     # Values are None by default
     parsed_info = defaultdict(lambda: None)
+    parsed_info['port'] = ''
 
     # Defaults to all attributes
     map(parsed_info.setdefault, SUPPORTED_ATTRIBUTES)

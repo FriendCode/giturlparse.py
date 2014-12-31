@@ -106,6 +106,10 @@ class GitUrlParsed(object):
     def assembla(self):
         return self.platform == 'assembla'
 
+    @property
+    def gitlab(self):
+        return self.platform == 'gitlab'
+
     ##
     # Get data as dict
     ##
