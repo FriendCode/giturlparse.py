@@ -4,7 +4,7 @@ from .github import GitHubPlatform
 from .bitbucket import BitbucketPlatform
 from .friendcode import FriendCodePlatform
 from .assembla import AssemblaPlatform
-from .gitlab import GitlabPlatform
+from .gitlab import GitLabPlatform
 
 
 # Supported platforms
